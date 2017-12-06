@@ -1,7 +1,32 @@
 #include "Window.hpp"
+#include <SDL2/SDL_image.h>
 
 
 namespace Engine{
+
+Framework::Framework(int flag)
+{
+	if ((1 & flag) == 1)
+		SDL_Init(SDL_INIT_VIDEO);
+
+	if ((2 & flag) == 2)
+		SDL_Init(SDL_INIT_TIMER);
+
+	if ((4 & flag) == 4)
+	 	SDL_Init(SDL_INIT_AUDIO);
+
+	if ((8 & flag) == 8)
+		SDL_Init(SDL_INIT_EVERYTHING);
+
+	SDL_Init(SDL_INIT_EVENTS);
+}
+
+Framework::~Framework()
+{
+	SDL_Quit();
+}
+
+
   Window::Window()
   {
     mWin = nullptr;

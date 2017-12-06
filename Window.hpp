@@ -1,6 +1,12 @@
 #include <SDL2/SDL.h>
 
-namespace Engine{
+namespace Engine {
+
+class Framework {
+public:
+	Framework(int flag);
+	~Framework();
+};
 
 class Window
 {

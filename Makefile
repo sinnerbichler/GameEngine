@@ -1,7 +1,7 @@
 #Makefile
 
 objs = Window.o Log.o Physics.o Timer.o Texture.o
-makeobj = g++ -c -fpic -lSDL2 $<
+makeobj = g++ -c -fpic -lSDL2 $< -Wall
 
 libGameEngine.so : $(objs)
 	g++ -shared -o libGameEngine.so $(objs)

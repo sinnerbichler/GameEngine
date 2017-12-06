@@ -7,7 +7,8 @@ namespace Engine {
 
 Texture::Texture()
 {
-	IMG_Init(IMG_INIT_PNG);
+	mTexture = nullptr;
+	mRenderer = nullptr;
 }
 
 Texture::~Texture()
