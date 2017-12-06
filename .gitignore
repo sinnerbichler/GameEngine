@@ -1,0 +1,11 @@
+#itself
+#.gitignore
+
+#all object files
+*.o
+
+#all  so files
+*.so
+
+#direxctories
+test/
