@@ -9,6 +9,9 @@ Texture::Texture()
 {
 	mTexture = nullptr;
 	mRenderer = nullptr;
+
+	mDst = { 0, 0, 0, 0 };
+	mSrc = { 0, 0, 0, 0 };
 }
 
 Texture::~Texture()
@@ -19,6 +22,9 @@ Texture::~Texture()
 void Texture::load(const char * path)
 {
 	SDL_Surface * temp_surf = saveLoadSurf(path);
+
+	mDst = setRect(temp_surf);
+	mSrc = mDst;
 
 	saveSetTexture(SDL_CreateTextureFromSurface(mRenderer, temp_surf));
 	SDL_FreeSurface(temp_surf);
@@ -62,7 +68,7 @@ SDL_Surface * Texture::saveLoadSurf(const char * path)
 	if(temp_surf == nullptr)
 	{
 		std::cout << "unable to load image: " << path << SDL_GetError() << std::endl;
-		exit;
+		return nullptr;
 	}
 
 	return temp_surf;
@@ -79,24 +85,26 @@ void Texture::saveSetTexture(SDL_Texture * tex)
 	}
 }
 
-SDL_Texture * Texture::texture()
+void Texture::render()
 {
-	return mTexture;
+	SDL_RenderCopy(mRenderer, mTexture, &mSrc, &mDst);
 }
 
-SDL_Rect * Texture::src()
-{
-	return &mSrc;
-}
+SDL_Texture * 	Texture::texture() 		{ return mTexture; }
+SDL_Rect * 		Texture::src() 			{ return &mSrc; }
+SDL_Rect * 		Texture::dst() 			{ return &mDst; }
+SDL_Renderer * Texture::renderer() 		{ return mRenderer; }
+SDL_Renderer * Texture::renderer(SDL_Renderer * r) { mRenderer = r; return mRenderer; }
 
-SDL_Rect * Texture::dst()
+SDL_Rect  Texture::setRect(SDL_Surface * surf)
 {
-	return &mDst;
-}
+	SDL_Rect r;
+	r.x = 0;
+	r.y = 0;
+	r.w = surf->w;
+	r.h = surf->h;
 
-SDL_Renderer * Texture::renderer()
-{
-	return mRenderer;
+	return r;
 }
 
 }//namespace Engine
