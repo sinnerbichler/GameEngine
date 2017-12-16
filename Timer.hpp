@@ -1,4 +1,6 @@
 //Timer.hpp
+#ifndef TIMER_HPP
+#define TIMER_HPP
 #include <SDL2/SDL.h>
 
 namespace Engine {
@@ -6,7 +8,7 @@ namespace Engine {
 class Timer{
 public:
 	Timer();
-	
+
 	int 		elapsed();
 	void  	update();
 	void 		speed(double t);
@@ -18,3 +20,5 @@ private:
 };
 
 }//namespace Engine
+
+#endif

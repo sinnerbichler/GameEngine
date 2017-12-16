@@ -1,4 +1,6 @@
 //Engine::Physics.hpp
+#ifndef PHYSICS_HPP
+#define PHYSICS_HPP
 #include <SDL2/SDL.h>
 
 namespace Engine {
@@ -15,3 +17,5 @@ struct Coordinates {
 double parabola(double t);
 
 }//namespace Engine
+
+#endif

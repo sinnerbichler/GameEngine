@@ -1,13 +1,17 @@
 //Object.cpp
+
+
 #include "Object.hpp"
 
 namespace Engine {
 
-Object::Object () {
+Object::Object ()
+{
 	mRenderer = nullptr;
 }
 
-Object::~Object() {
+Object::~Object()
+{
 	mRenderer = nullptr;
 }
 

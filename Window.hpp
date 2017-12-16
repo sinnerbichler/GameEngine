@@ -1,3 +1,6 @@
+#ifdef WINDOW_HPP
+#define WINDOW_HPP
+
 #include <SDL2/SDL.h>
 
 namespace Engine {
@@ -32,3 +35,5 @@ private:
 }//namespace Engine
 
 int factorial(int a);
+
+#endif
