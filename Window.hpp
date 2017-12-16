@@ -4,6 +4,10 @@ namespace Engine {
 
 class Framework {
 public:
+	//video 1
+	//timer 2
+	//audio 4
+	//everything 8
 	Framework(int flag);
 	~Framework();
 };
