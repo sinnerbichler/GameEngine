@@ -1,6 +1,6 @@
 #Makefile
 
-objs = Window.o Log.o Physics.o Timer.o Texture.o
+objs = Window.o Log.o Physics.o Timer.o Texture.o Bezier.o Object.o
 makeobj = g++ -c -fpic -lSDL2 $< -Wall
 
 libGameEngine.so : $(objs)
@@ -19,4 +19,10 @@ Timer.o : Timer.cpp Timer.hpp
 	$(makeobj)
 
 Texture.o : Texture.cpp Texture.hpp
+	$(makeobj)
+
+Bezier.o : Bezier.cpp Bezier.hpp
+	$(makeobj)
+
+Object.o : Object.cpp Object.hpp
 	$(makeobj)
