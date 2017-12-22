@@ -23,7 +23,6 @@ void Log::create_logfile(const char * name)
 	if (file.is_open())
 	{
 		write("Logfile already exists!", error);
-		exit;
 	}
 	file.open(name,  ios::out);
 

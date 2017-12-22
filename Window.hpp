@@ -1,4 +1,4 @@
-#ifdef WINDOW_HPP
+#ifndef WINDOW_HPP
 #define WINDOW_HPP
 
 #include <SDL2/SDL.h>
