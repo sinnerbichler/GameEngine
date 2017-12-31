@@ -1,4 +1,7 @@
 //object
+#ifndef OBJECT_HPP
+#define OBJECT_HPP
+
 #include <SDL2/SDL.h>
 
 namespace Engine {
@@ -13,3 +16,5 @@ protected:
 	SDL_Renderer * mRenderer;
 };
 }
+
+#endif

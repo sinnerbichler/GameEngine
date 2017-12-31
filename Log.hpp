@@ -1,4 +1,6 @@
 //Log
+#ifndef LOG_HPP
+#define LOG_HPP
 #include <fstream>
 
 namespace Engine {
@@ -26,3 +28,5 @@ private:
 };
 
 }//namespace Engine
+
+#endif

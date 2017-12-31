@@ -1,4 +1,6 @@
 //Engine::Texture
+#ifndef TEXTURE_HPP
+#define TEXTURE_HPP
 #include <SDL2/SDL.h>
 
 namespace Engine {
@@ -34,3 +36,5 @@ protected:
 };
 
 }//namespace Engine
+
+#endif
