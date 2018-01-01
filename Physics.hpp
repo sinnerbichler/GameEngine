@@ -8,13 +8,14 @@ namespace Engine {
 template <class T>
 struct Coordinates {
 	T x, y;
-}
+};
 
 //parabel function whose value is
 //parabola(0) = 0; parabola(1) = 0
 //parabola(0.5) = 1
 //concepted for calculating jumps
-double parabola(double t);
+double downwards_parabola(double t);
+double upwards_parabola(double t);
 
 }//namespace Engine
 

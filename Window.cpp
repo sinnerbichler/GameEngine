@@ -29,6 +29,8 @@ Window::Window()
 {
   mWin = nullptr;
   mWinRenderer = nullptr;
+
+  //SDL_GL_SetSwapInterval(1);
 }
 
 Window::~Window()
