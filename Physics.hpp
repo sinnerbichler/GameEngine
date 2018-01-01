@@ -15,7 +15,9 @@ struct Coordinates {
 //parabola(0.5) = 1
 //concepted for calculating jumps
 double downwards_parabola(double t);
-double upwards_parabola(double t);
+double upwards_parabola  (double t);
+double falling_parabola  (double t);
+double ascending_parabola(double t);
 
 }//namespace Engine
 
