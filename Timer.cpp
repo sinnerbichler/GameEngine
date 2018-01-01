@@ -16,6 +16,11 @@ int Timer::elapsed()
 	return (mElapsed * mspeed);
 }
 
+int Timer::current()
+{
+	return mCurrent;
+}
+
 void Timer::update()
 {
 	mLast = mCurrent;

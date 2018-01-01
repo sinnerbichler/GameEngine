@@ -9,6 +9,7 @@ class Timer{
 public:
 	Timer();
 
+	int      current();
 	int 		elapsed();
 	void  	update();
 	void 		speed(double t);
