@@ -7,6 +7,7 @@ namespace Engine {
 
 template <class T>
 struct Coordinates {
+	//Coordinates( T X, T Y );
 	T x, y;
 };
 
